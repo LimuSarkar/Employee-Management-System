@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Employee Management System</h2>
+
+    <!-- Profile Summary -->
+    <div class="form-group">
+      <h3>Profile Summary</h3>
+
+     <p><b>Name:</b>Limu Sarkar</p>
+     <p><b>Employee ID:</b> EMP-001</p>
+     <p><b>Designation:</b> Software Engineer</p>
+     <p><b>Department:</b> IT</p>
+     <p><b>Email:</b> limuS@example.com</p>
+     <p><b>Phone:</b> 01XXXXXXXXX</p>
+    </div>
+
+    <!-- Attendance -->
+    <div class="form-group">
+     <h3>Attendance Tracker</h3>
+
+      <p id="attendanceStatus">Today's Status: Not Marked</p>
+    <button type="button" id="checkInBtn">Check In</button>
+    <button type="button" id="checkOutBtn">Check Out</button>
+      <p id="attendanceMessage" class="message"></p>
+    </div>
+
+     <!-- Leave Application -->
+     <div class="form-group">
+      <h3>Leave Application</h3>
+
+    <form id="leaveForm" novalidate>
+
+    <label for="reason">Reason:</label>
+    <textarea id="reason" rows="3" placeholder="Enter your reason"></textarea>
+    <span id="reasonError" class="error"></span>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <span id="startDateError" class="error"></span>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+        <span id="endDateError" class="error"></span>
+
+    <button type="submit">Submit Leave Request</button>
+
+    </form>
+
+     <p id="leaveStatus" class="message"></p>
+    </div>
+
+<!-- Task Status -->
+    <div class="form-group">
+         <h3>My Tasks</h3>
+
+      <p>Task 1: Complete weekly project update</p>
+            <select class="taskStatus">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+
+            <p>Task 2: Review project bugs</p>
+            <select class="taskStatus">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+
+            <p id="taskMessage" class="message"></p>
+    </div>
+
+        <!-- Logout -->
+        <button type="button" id="logoutBtn">Logout</button>
+
+    </div>
+
+    <script src="employee.js"></script>
+
+</body>
+</html>
